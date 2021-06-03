@@ -9,7 +9,7 @@ public class ProjectSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().denyAll().and().formLogin().and().httpBasic();
+        http.authorizeRequests().anyRequest().permitAll().and().formLogin().and().httpBasic();
     }
 
 }
